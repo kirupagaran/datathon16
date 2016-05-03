@@ -51,10 +51,10 @@ object ModelAndTrain {
        https://spark.apache.org/docs/1.3.0/mllib-feature-extraction.html
       */
       val idf = new IDF().fit(synopsis_frequency_vector)
-      //val tfidf=idf.transform(synopsis_frequency_vector)
+      val tfidf=idf.transform(synopsis_frequency_vector)
 
       /*produces (rating,vector) tuples*/
-      /*val zipped=ratings.zip(tfidf)
+      val zipped=ratings.zip(tfidf)
 
       /*Now we transform them into LabeledPoints*/
       val labeledPoints = zipped.map{case (label,vector)=> LabeledPoint(label,vector)}
@@ -75,7 +75,7 @@ object ModelAndTrain {
 
       val result = model.predict(tfidf_test)
 
-      result.collect.foreach(x=>println("Predicted rating for the title is: "+x))*/
+      result.collect.foreach(x=>println("Predicted rating for the title is: "+x))
 
     }
 }
