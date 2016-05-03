@@ -88,6 +88,7 @@ println("finished")
 
       /*--- Model is trained now we get it to classify our test file with only synopsis ---*/
       val testDataFile = sc.textFile("/Users/preethi/Sites/scala/datathon16/datathon16/resources/hat_neg_title.txt")
+      val testDataID = sc.textFile("/Users/preethi/Sites/scala/datathon16/datathon16/resources/hat_neg_id.txt")
 
       /*We only have synopsis now. The rating is what we want to achieve.*/
       val testVectors=testDataFile.map{x=>
@@ -100,13 +101,16 @@ println("finished")
 
       val result = model.predict(tfidf_test)
 
+
       //result.take(20).foreach(x=>println("Predicted rating for the title is: "+x))
       //testDataFile.take(20).foreach(x=>println("Predicted rating for the title is: "+x))
       //}
       println(result.count())
       println(testDataFile.count())
       val toIntResult = result.map ( x => x.toInt)
-      toIntResult.saveAsTextFile("/tmp/CSVFolder")
+     // toIntResult.saveAsTextFile("/tmp/CSVFolder")
+      var res = testDataID.zip(toIntResult).map { case (x, y) => x.trim() + "\t" + y } //for((one, two) <- (testDataID zip toIntResult)) yield new RDD(x, y)
+      res.saveAsTextFile("/tmp/CSVFolder")
 
     }
 }
