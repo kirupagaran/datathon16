@@ -4,7 +4,7 @@
 		module="firstproject_2.10"
 		revision="1.0"
 		status="integration"
-		publication="20160503225718"
+		publication="20160505050942"
 	>
 		<description>
 		FirstProject
@@ -38,5 +38,6 @@
 		<dependency org="org.apache.spark" name="spark-mllib_2.10" rev="1.5.0" conf="provided->default(compile)"/>
 		<dependency org="commons-cli" name="commons-cli" rev="1.2" conf="compile->default(compile)"/>
 		<dependency org="org.apache.lucene" name="lucene-analyzers-common" rev="5.1.0" conf="compile->default(compile)"/>
+		<dependency org="com.databricks" name="spark-csv_2.10" rev="1.4.0" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>
