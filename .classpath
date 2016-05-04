@@ -1,6 +1,5 @@
 <classpath>
   <classpathentry kind="src" path="src/main/scala"/>
-  <classpathentry kind="con" path="org.scala-ide.sdt.launching.SCALA_CONTAINER"/>
   <classpathentry kind="lib" path="/Users/preethi/.ivy2/cache/org.apache.spark/spark-core_2.10/jars/spark-core_2.10-1.5.0.jar"/>
   <classpathentry kind="lib" path="/Users/preethi/.ivy2/cache/org.apache.avro/avro-mapred/jars/avro-mapred-1.7.7-hadoop2.jar"/>
   <classpathentry kind="lib" path="/Users/preethi/.ivy2/cache/org.apache.avro/avro-ipc/jars/avro-ipc-1.7.7-tests.jar"/>
@@ -115,6 +114,10 @@
   <classpathentry kind="lib" path="/Users/preethi/.ivy2/cache/net.sf.py4j/py4j/jars/py4j-0.8.2.1.jar"/>
   <classpathentry kind="lib" path="/Users/preethi/.ivy2/cache/org.apache.lucene/lucene-analyzers-common/jars/lucene-analyzers-common-5.1.0.jar"/>
   <classpathentry kind="lib" path="/Users/preethi/.ivy2/cache/org.apache.lucene/lucene-core/jars/lucene-core-5.1.0.jar"/>
+  <classpathentry kind="lib" path="/Users/preethi/.ivy2/cache/com.databricks/spark-csv_2.10/jars/spark-csv_2.10-1.4.0.jar"/>
+  <classpathentry kind="con" path="org.scala-ide.sdt.launching.SCALA_CONTAINER"/>
+  <classpathentry kind="lib" path="/Users/preethi/.ivy2/cache/org.apache.commons/commons-csv/jars/commons-csv-1.1.jar"/>
+  <classpathentry kind="lib" path="/Users/preethi/.ivy2/cache/com.univocity/univocity-parsers/jars/univocity-parsers-1.5.1.jar"/>
   <classpathentry kind="lib" path="/Users/preethi/.ivy2/cache/org.apache.spark/spark-mllib_2.10/jars/spark-mllib_2.10-1.5.0.jar"/>
   <classpathentry kind="lib" path="/Users/preethi/.ivy2/cache/org.apache.spark/spark-streaming_2.10/jars/spark-streaming_2.10-1.5.0.jar"/>
   <classpathentry kind="lib" path="/Users/preethi/.ivy2/cache/org.apache.spark/spark-sql_2.10/jars/spark-sql_2.10-1.5.0.jar"/>
